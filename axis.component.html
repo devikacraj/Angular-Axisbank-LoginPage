@@ -1,0 +1,47 @@
+<p>axis works!</p>
+<body bgcolor="#F1F3F6">
+    
+    <td align="right"><img src="../assets/axis.png" width="100%" height="200%"></td>
+    
+    <table>
+    
+        <tr>
+            <th (click)="Show()">Login ID</th>
+            <th (click)="Disp()" >Debit Card No.</th>
+            <th (click)="Display()">mPIN</th>
+        </tr>
+        <div>
+            <form id=login class="login">
+            <tr *ngIf="show"><input type="text" class="field" placeholder="login id" required/></tr>
+            <br>
+            <tr *ngIf="show"><input type="password" class="field" placeholder="Password" required></tr>
+            <br>
+            <tr *ngIf="show"><button type="submit" class="submit-btn">Login</button></tr>
+            </form>
+            <form id=debit class="login">
+                <tr *ngIf="disp"><input type="text" class="field" placeholder="Card No" required/></tr>
+                <br>
+                <tr *ngIf="disp"><input type="text" class="field" placeholder="PIN NO" required></tr>
+                <br>
+                <tr *ngIf="disp"><button type="submit" class="submit-btn">Login</button></tr>
+            </form>
+            <form id=pin class="login">
+                <tr *ngIf="display">Select an option<br></tr>
+                <td *ngIf="display"><input type="radio" class="field" name="type" (click)="cust()">Customer ID</td>
+                <tr *ngIf="display"><input type="radio" class="field" name="type" (click)="mob()">Registered Mobile No.</tr>
+                
+                <tr *ngIf="Cust"><input type="number" class="field" placeholder="Customer ID"></tr>
+                <tr *ngIf="Cust"><input type="number" class="field" placeholder="mPIN"></tr>
+                <tr *ngIf="Cust"><button type="submit" class="submit-btn">Login</button></tr>
+                
+                <tr *ngIf="Mob"><input type="number" class="field" placeholder="Mobile No."></tr>
+                <tr *ngIf="Mob"><input type="number" class="field" placeholder="mPIN"></tr>
+                <tr *ngIf="Mob"><button type="submit" class="submit-btn">Login</button></tr>
+
+            </form>
+        </div>
+            
+    
+        
+        
+    </table>
